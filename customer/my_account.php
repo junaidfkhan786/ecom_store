@@ -341,7 +341,7 @@ if(isset($_GET['send_email'])){
 
 $subject = "Email Confirmation Message";
 
-$from = "sad.ahmed22224@gmail.com";
+$from = "junaidfkhan786@gmail.com";
 
 $message = "
 

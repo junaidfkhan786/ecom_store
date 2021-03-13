@@ -408,17 +408,7 @@ echo "<a href='customer/my_account.php?my_orders'>My Account</a>";
 </div><!-- form-group Ends -->
 
 
-<div class="form-group"><!-- form-group Starts -->
 
-<center>
-
-<label> Captcha Verification </label>
-
-<div class="g-recaptcha" data-sitekey="6Lc-WxYUAAAAAFUhTFfBEzLGmEgRXHHdsD4ECvIC"></div>
-
-</center>
-
-</div><!-- form-group Ends -->
 
 
 <div class="text-center"><!-- text-center Starts -->
@@ -577,17 +567,24 @@ if(val.length<=6)no=1;
 
 if(isset($_POST['register'])){
 
-$secret = "6Lc-WxYUAAAAAN5j2OdDsryWwGfREg5eeuZFpKMv";
+// $secret = "6Lc-WxYUAAAAAN5j2OdDsryWwGfREg5eeuZFpKMv";
 
-$response = $_POST['g-recaptcha-response'];
+// $response = $_POST['g-recaptcha-response'];
 
 $remoteip = $_SERVER['REMOTE_ADDR'];
 
-$url = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$remoteip");
+// $url = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$response&remoteip=$remoteip");
 
-$result = json_decode($url, TRUE);
+// $result = json_decode($url, TRUE);
 
-if($result['success'] == 1){
+// if($result['success'] == 1){
+
+// }
+// else{
+
+// echo "<script>alert('Please Select Captcha, Try Again')</script>";
+
+// }
 
 $c_name = mysqli_real_escape_string($con, $_POST['c_name']);
 
@@ -653,7 +650,7 @@ $customer_confirm_code = mt_rand();
 
 $subject = "Email Confirmation Message";
 
-$from = "sad.ahmed22224@gmail.com";
+$from = "junaidfkhan786@gmail.com";
 
 $message = "
 
@@ -712,12 +709,6 @@ echo "<script>window.open('index.php','_self')</script>";
 }
 
 
-}
-else{
-
-echo "<script>alert('Please Select Captcha, Try Again')</script>";
-
-}
 
 
 }
