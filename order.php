@@ -54,19 +54,19 @@ array_push($physical_products, $product_id);
 
 if(count($physical_products) > 0){
 	
- $shipping_type = $_SESSION["shipping_type"];
+ $shipping_type = $_SESSION["shipping_type"] = 'COD';
 
-$shipping_cost = $_SESSION["shipping_cost"];
+$shipping_cost = $_SESSION["shipping_cost"] = 0;
 
 $is_shipping_address_same = $_SESSION["is_shipping_address_same"];
 
 $select_shipping_type = "select * from shipping_types where type_id='$shipping_type'";
 
-$run_shipping_type = mysqli_query($con,$select_shipping_type);
+// $run_shipping_type = mysqli_query($con,$select_shipping_type);
 
-$row_shipping_type = mysqli_fetch_array($run_shipping_type);
+// $row_shipping_type = mysqli_fetch_array($run_shipping_type);
 
-$shipping_type_name = $row_shipping_type["type_name"];
+$shipping_type_name = $row_shipping_type["type_name"]="COD";
 	
 }
 
@@ -188,7 +188,7 @@ echo "
 
 <script>
 
-// alert('Your Order Has Been Submitted Successfully, Thanks.');
+alert('Your Order Has Been Submitted Successfully, Thanks.');
 
 window.open('order_received.php?order_id=$insert_order_id','_self');
 

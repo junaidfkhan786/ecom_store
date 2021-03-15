@@ -454,11 +454,7 @@ $items_subtotal += $sub_total;
 
 <i class="fa fa-times" title="Product Qty"></i> <?php echo $product_qty; ?> 
 
-<?php if($product_size != "None"){ ?>
 
-<i class="fa fa-plus" title="Product Size"></i> <?php echo $product_size; ?> 
-
-<?php } ?>
 
 </td>
 

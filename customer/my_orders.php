@@ -150,14 +150,14 @@ echo $total_items . " items";
 <ul class="dropdown-menu dropdown-menu-right">
 
 <?php if($order_status == "pending"){ ?>
-
+<!-- 
 <li>
 
 <a href="confirm.php?order_id=<?php echo $order_id; ?>" target="blank" class="bg-danger">
 Confirm If Paid
 </a>
 
-</li>
+</li> -->
 
 <?php } ?>
 

@@ -562,22 +562,14 @@ if($status == "product"){
 
 <?php if($pro_type == "physical_product"){ ?>
 
-<div class="form-group" ><!-- form-group Starts -->
+<div style="display:none;" class="form-group" ><!-- form-group Starts -->
 
 <label class="col-md-5 control-label" >Product Size</label>
 
 <div class="col-md-7" ><!-- col-md-7 Starts -->
 
-<select name="product_size" class="form-control" required>
-
-<option value="">Select a Size</option>
-
+<select  name="product_size" class="form-control" required>
 <option>Small</option>
-<option>Medium</option>
-<option>Large</option>
-
-<option>Extra Large</option>
-
 
 </select>
 
