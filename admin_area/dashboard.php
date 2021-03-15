@@ -307,7 +307,7 @@ $customer_email = $row_customer['customer_email'];
 
 <td>#<?php echo $invoice_no; ?></td>
 
-<td>$<?php echo $order_total; ?></td>
+<td>&#8377;<?php echo $order_total; ?></td>
 
 <td><?php echo $order_date; ?></td>
 

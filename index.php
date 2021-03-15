@@ -12,10 +12,10 @@ include("functions/functions.php");
 
 <head>
 
-<title>E commerce Store </title>
+<title>SWARAJYA FARMS </title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
-
+<link rel="icon" type="image/x-icon" href="customer/images/logo.png">
 <link href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100" rel="stylesheet" >
 
 <link href="styles/bootstrap.min.css" rel="stylesheet">

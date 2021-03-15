@@ -164,7 +164,8 @@ else {
 
 </li><!-- Products li Ends -->
 
-<li><!-- Bundles Li Starts --->
+<!-- Bundles Li Starts --->
+<!-- <li>
 
 <a href="#" data-toggle="collapse" data-target="#bundles">
 
@@ -186,19 +187,21 @@ else {
 
 </ul>
 
-</li><!-- Bundles Li Ends --->
+</li> -->
+<!-- Bundles Li Ends --->
+<!-- 
+<li>
 
-<li><!-- relations li Starts -->
 
-<a href="#" data-toggle="collapse" data-target="#relations"><!-- anchor Starts -->
+<a href="#" data-toggle="collapse" data-target="#relations">
 
 <i class="fa fa-fw fa-retweet"></i> Assign Products To Bundles Relations
 
 <i class="fa fa-fw fa-caret-down"></i>
 
-</a><!-- anchor Ends -->
+</a>
 
-<ul id="relations" class="collapse"><!-- collapse Starts -->
+<ul id="relations" class="collapse">
 
 <li>
 
@@ -213,22 +216,22 @@ else {
 
 </li>
 
-</ul><!-- collapse Ends -->
+</ul>
 
 
-</li><!-- relations li Ends -->
+</li> -->
 
-<li><!-- downloads li Starts -->
 
-<a href="#" data-toggle="collapse" data-target="#downloads"><!-- anchor Starts -->
+<!-- <li>
 
+<a href="#" data-toggle="collapse" data-target="#downloads">
 <i class="fa fa-fw fa-download"></i> Downloads
 
 <i class="fa fa-fw fa-caret-down"></i>
 
-</a><!-- anchor Ends -->
+</a>
 
-<ul id="downloads" class="collapse"><!-- collapse Starts -->
+<ul id="downloads" class="collapse">
 
 <li>
 
@@ -243,22 +246,22 @@ else {
 
 </li>
 
-</ul><!-- collapse Ends -->
+</ul>
 
 
-</li><!-- downloads li Ends -->
+</li> -->
 
-<li><!-- shipping li Starts -->
+<!-- <li>
 
-<a href="#" data-toggle="collapse" data-target="#shipping"><!-- anchor Starts -->
+<a href="#" data-toggle="collapse" data-target="#shipping">
 
 <i class="fa fa-fw fa-truck"></i> Ecommerce Shipping
 
 <i class="fa fa-fw fa-caret-down"></i>
 
-</a><!-- anchor Ends -->
+</a>
 
-<ul id="shipping" class="collapse"><!-- collapse Starts -->
+<ul id="shipping" class="collapse">
 
 <li>
 
@@ -285,10 +288,10 @@ else {
 
 </li>
 
-</ul><!-- collapse Ends -->
+</ul>
 
 
-</li><!-- shipping li Ends -->
+</li> -->
 
 <li><!-- countries li Starts -->
 
@@ -318,7 +321,7 @@ else {
 
 </li><!-- countries li Ends -->
 
-<li><!-- Icons Li Starts -->
+<!-- <li>
 
 <a href="#" data-toggle="collapse" data-target="#icons">
 
@@ -328,7 +331,7 @@ else {
 
 </a>
 
-<ul id="icons" class="collapse"><!-- Icons Ul Starts -->
+<ul id="icons" class="collapse">
 
 <li>
 <a href="index.php?insert_icon"> Insert Icon </a>
@@ -339,9 +342,9 @@ else {
 <a href="index.php?view_icons"> View Icons </a>
 </li>
 
-</ul><!-- Icons Ul Ends -->
+</ul>
 
-</li><!-- Icons Li Ends -->
+</li> -->
 
 
 <li><!-- manufacturer li Starts -->

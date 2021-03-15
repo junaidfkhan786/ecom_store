@@ -75,7 +75,7 @@ $total += $sub_total;
 
 }
 
-echo "$" . $total;
+echo "	&#8377;" . $total;
 
 
 }

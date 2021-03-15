@@ -17,8 +17,7 @@ else {
 
 <title> Insert Products </title>
 
-
-<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
   <script>tinymce.init({ selector:'#product_desc,#product_features' });</script>
 
 </head>
@@ -225,7 +224,6 @@ Product Url Example : navy-blue-t-shirt
 
 <select class="form-control" name="manufacturer"><!-- select manufacturer Starts -->
 
-<option> Select A Manufacturer </option>
 
 <?php
 

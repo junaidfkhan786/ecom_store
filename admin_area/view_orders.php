@@ -261,7 +261,7 @@ Shipping None
 
 <td>
 
-<strong> $<?php echo $order_total; ?> </strong><br>
+<strong> &#8377;<?php echo $order_total; ?> </strong><br>
 
 <span class="text-muted"> Via <?php echo ucwords($payment_method); ?> </span>
 

@@ -113,13 +113,13 @@ echo "<li> <a href='shop.php?p_cat=$p_cat_id'> $p_cat_title </a> </li>";
 <h4>Where to find us</h4>
 
 <p><!-- p Starts -->
-<strong>Computerfever Ltd.</strong>
-<br>Saeed Park
-<br>Lahore
-<br>0923334566931
-<br>sad.ahmed22224@gmail.com
+<strong>SWARAJYA FARMS</strong>
+<br>mumbai
+<br>india
+<br>123456789
+<br>SWARAJYAFARMS@gmail.com
 <br>
-<strong>Mohammed Tahir Ahmed</strong>
+<strong>SWARAJYA FARMS</strong>
 
 </p><!-- p Ends -->
 
@@ -183,7 +183,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
 
 <div class="col-md-6" ><!-- col-md-6 Starts -->
 
-<p class="pull-left"> &copy; 2016 Mohammed Tahir Ahmed </p>
+<p class="pull-left"> &copy; 2021 SWARAJYA FARMS </p>
 
 </div><!-- col-md-6 Ends -->
 
@@ -191,7 +191,7 @@ Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac tu
 
 <p class="pull-right" >
 
-Template by <a href="http://www.computerfever.com" >Computerfever.com</a>
+Template by <a href="#" >SWARAJYA FARMS</a>
 
 </p>
 

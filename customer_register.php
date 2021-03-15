@@ -650,12 +650,12 @@ $customer_confirm_code = mt_rand();
 
 $subject = "Email Confirmation Message";
 
-$from = "junaidfkhan786@gmail.com";
+$from = "fusioncrew786@gmail.com";
 
 $message = "
 
 <h2>
-Email Confirmation By Computerfever.com $c_name
+Email Confirmation By SWARAJYA FARMS $c_name
 </h2>
 
 <a href='localhost/ecom_store/customer/my_account.php?$customer_confirm_code'>

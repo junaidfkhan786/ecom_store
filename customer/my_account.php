@@ -341,12 +341,12 @@ if(isset($_GET['send_email'])){
 
 $subject = "Email Confirmation Message";
 
-$from = "junaidfkhan786@gmail.com";
+$from = "fusioncrew786@gmail.com";
 
 $message = "
 
 <h2>
-Email Confirmation By Computerfever.com $c_name
+Email Confirmation By SWARAJYA FARMS $c_name
 </h2>
 
 <a href='localhost/ecom_store/customer/my_account.php?$customer_confirm_code'>
@@ -361,7 +361,12 @@ $headers = "From: $from \r\n";
 
 $headers .= "Content-type: text/html\r\n";
 
-mail($c_email,$subject,$message,$headers);
+if(mail($c_email,$subject,$message,$headers)){
+    echo "Mail Send Successfully";
+} else {
+    echo"Mail Failed";
+}
+ 
 
 echo "<script>alert('Your Confirmation Email Has Been sent to you, check your inbox')</script>";
 

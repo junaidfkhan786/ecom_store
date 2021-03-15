@@ -54,7 +54,7 @@ array_push($physical_products, $product_id);
 
 if(count($physical_products) > 0){
 	
-$shipping_type = $_SESSION["shipping_type"];
+ $shipping_type = $_SESSION["shipping_type"];
 
 $shipping_cost = $_SESSION["shipping_cost"];
 
@@ -188,7 +188,7 @@ echo "
 
 <script>
 
-alert('Your Order Has Been Submitted Successfully, Thanks.');
+// alert('Your Order Has Been Submitted Successfully, Thanks.');
 
 window.open('order_received.php?order_id=$insert_order_id','_self');
 

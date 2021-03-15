@@ -103,7 +103,7 @@ echo ucwords($order_status);
 
 <td> 
 
-<strong>$<?php echo $order_total; ?></strong>
+<strong>&#8377;<?php echo $order_total; ?></strong>
 
 for
 

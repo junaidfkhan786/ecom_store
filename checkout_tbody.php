@@ -642,7 +642,7 @@ echo "checked";
 	
 }
 
-$total_cart_price = $total + @$_SESSION["shipping_cost"];
+$total_cart_price = $total 
 
 ?>
 
@@ -686,7 +686,7 @@ $total_cart_price = $total + @$_SESSION["shipping_cost"];
 
 <?php if(@$_SESSION["payment_method"] == "pay_offline"){ echo "checked"; } ?>>
 
-<label for="offline-radio"> Pay Offline </label>
+<label for="offline-radio"> COD </label>
 
 <p id="offline-desc" class="text-muted">
 
@@ -696,47 +696,8 @@ Your order will not be shipped until the funds have cleared in our account.
 
 </th>
 
-</tr>
 
-<tr>
 
-<th colspan="2">
-
-<input id="stripe-radio" type="radio" name="payment_method" value="stripe"
-
-<?php if(@$_SESSION["payment_method"] == "stripe"){ echo "checked"; } ?>>
-
-<label for="stripe-radio"> Credit Card (Stripe) </label>
-
-<p id="offline-desc" class="text-muted">
-
-Pay with your credit card via Stripe.
-
-</P>
-
-</th>
-
-</tr>
-
-<tr>
-
-<th colspan="2">
-
-<input id="paypal-radio" type="radio" name="payment_method" value="paypal" 
-
-<?php if(@$_SESSION["payment_method"] == "paypal"){ echo "checked"; } ?>>
-
-<label for="paypal-radio"> Paypal </label>
-
-<p id="paypal-desc" class="text-muted">
-
-Pay via PayPal you can pay with your credit card if you don’t have a PayPal account.
-
-</P>
-
-</th>
-
-</tr>
 
 <tr>
 

@@ -75,7 +75,7 @@ $count_pending_orders = mysqli_num_rows($run_pending_orders);
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" >
 
 <link href="css/bootstrap.min.css" rel="stylesheet">
-
+<link rel="icon" type="image/x-icon" href="../images/logo.png">
 <link href="css/style.css" rel="stylesheet">
 
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" >

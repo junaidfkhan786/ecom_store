@@ -462,7 +462,7 @@ $items_subtotal += $sub_total;
 
 </td>
 
-<th>$<?php echo $sub_total; ?> </th>
+<th>&#8377;<?php echo $sub_total; ?> </th>
 
 </tr>
 
@@ -473,7 +473,7 @@ $items_subtotal += $sub_total;
 
 <th class="text-muted"> Subtotal: </th>
 
-<th> $<?php echo $items_subtotal; ?>  </th>
+<th> &#8377;<?php echo $items_subtotal; ?>  </th>
 
 </tr>
 
@@ -491,7 +491,7 @@ $items_subtotal += $sub_total;
 
 </span>
 
-$<?php echo $shipping_cost; ?>
+&#8377;<?php echo $shipping_cost; ?>
 
 </th>
 
@@ -503,7 +503,7 @@ $<?php echo $shipping_cost; ?>
 
 <td> Total: </td>
 
-<td>$<?php echo $order_total; ?></td>
+<td>&#8377;<?php echo $order_total; ?></td>
 
 </tr>
 
@@ -635,7 +635,7 @@ echo $country_name = $row_country["country_name"];
 
 <li> Payment Method: <strong><?php echo ucwords($payment_method); ?></strong> </li>
 
-<li> Total: <strong>$<?php echo $order_total; ?></strong> </li>
+<li> Total: <strong>&#8377;<?php echo $order_total; ?></strong> </li>
 
 <li> 
 

@@ -526,7 +526,7 @@ $total_weight += $sub_total_weight;
 
 </td>
 
-<th>$<?php echo $sub_total; ?> </th>
+<th>&#8377;<?php echo $sub_total; ?> </th>
 
 </tr>
 
@@ -536,7 +536,7 @@ $total_weight += $sub_total_weight;
 
 <td class="text-muted bold"> Order Subtotal </td>
 
-<th> $<?php echo $total; ?>.00 </th>
+<th> &#8377;<?php echo $total; ?>.00 </th>
 
 </tr>
 
@@ -917,7 +917,6 @@ echo "
 
 <p>
 
-There are no shipping types matched/available for your address, or contact us if you need any help.
 
 </p>
 
@@ -1055,7 +1054,7 @@ echo "checked";
 	
 }
 
-$total_cart_price = $total + @$_SESSION["shipping_cost"];
+$total_cart_price = $total
 
 ?>
 
@@ -1071,7 +1070,7 @@ $total_cart_price = $total + @$_SESSION["shipping_cost"];
 
 <td class="text-muted bold">Tax</td>
 
-<th>$0.00</th>
+<th>&#8377;0.00</th>
 
 </tr>
 
@@ -1081,11 +1080,11 @@ $total_cart_price = $total + @$_SESSION["shipping_cost"];
 
 <?php if(count($physical_products) > 0){ ?>
 
-<th class="total-cart-price">$<?php echo $total_cart_price; ?>.00</th>
+<th class="total-cart-price">&#8377;<?php echo $total_cart_price; ?>.00</th>
 
 <?php }else{ ?>
 
-<th class="total-cart-price">$<?php echo $total; ?>.00</th>
+<th class="total-cart-price">&#8377;<?php echo $total; ?>.00</th>
 
 <?php } ?>
 
@@ -1097,11 +1096,9 @@ $total_cart_price = $total + @$_SESSION["shipping_cost"];
 
 <input id="offline-radio" type="radio" name="payment_method" value="pay_offline">
 
-<label for="offline-radio"> Pay Offline </label>
+<label for="offline-radio"> COD </label>
 
 <p id="offline-desc" class="text-muted">
-
-Your order will not be shipped until the funds have cleared in our account.
 
 </P>
 
@@ -1109,7 +1106,7 @@ Your order will not be shipped until the funds have cleared in our account.
 
 </tr>
 
-<tr>
+<!-- <tr>
 
 <th colspan="2">
 
@@ -1143,7 +1140,7 @@ Pay via PayPal you can pay with your credit card if you don’t have a PayPal ac
 
 </th>
 
-</tr>
+</tr> -->
 
 <tr>
 
@@ -1180,132 +1177,6 @@ $stripe_total_amount = $total * 100;
 }	
 
 ?>
-
-<form id="stripe-form" action="stripe_charge.php" method="post"><!-- stripe-form Starts -->
-
-<?php if(count($physical_products) > 0){ ?>
-
-<input type="hidden" name="total_amount" value="<?php echo $total_cart_price; ?>" >
-
-<?php }else{ ?>
-
-<input type="hidden" name="total_amount" value="<?php echo $total; ?>" >
-
-<?php } ?>
-
-<input type="hidden" name="stripe_total_amount" value="<?php echo $stripe_total_amount; ?>" >
-
-<input
-
-type="submit"
-
-id="stripe-submit"
-
-class="btn btn-success btn-lg"
-
-value="Procced With Stripe"
-
-style="border-radius:0px;"
-
-data-name="computerfever.com"
-
-data-description="Pay With Credit Card"
-
-data-image="images/stripe-logo.png"
-
-data-key="<?php echo $stripe["publishable_key"]; ?>"
-
-data-amount="<?php echo $stripe_total_amount; ?>"
-
-data-currency="usd"
-
-data-email="<?php echo $customer_email; ?>"
-
->
-
-</form><!-- stripe-form Ends -->
-
-<form id="paypal-form" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post"><!-- paypal-form Starts -->
-
-<input type="hidden" name="business" value="admin-bussioness@computerfever.com" >
-
-<input type="hidden" name="cmd" value="_cart" >
-
-<input type="hidden" name="upload" value="1" >
-
-<input type="hidden" name="currency_code" value="USD" >
-
-<?php if(count($physical_products) > 0){ ?>
-
-<input type="hidden" name="return" value="http://localhost/ecom_store/paypal_order.php?c_id=<?php echo $customer_id; ?>&amount=<?php echo $total_cart_price; ?>" >
-
-<?php }else{ ?>
-
-<input type="hidden" name="return" value="http://localhost/ecom_store/paypal_order.php?c_id=<?php echo $customer_id; ?>&amount=<?php echo $total; ?>" >
-
-<?php } ?>
-
-<input type="hidden" name="cancel_return" value="http://localhost/ecom_store/checkout.php" >
-
-<?php
-
-$i = 0;
-
-$select_cart = "select * from cart where ip_add='$ip_add'";
-
-$run_cart = mysqli_query($con,$select_cart);
-
-while($row_cart = mysqli_fetch_array($run_cart)){
-
-$product_id = $row_cart['p_id'];
-
-$product_qty = $row_cart['qty'];
-
-$product_price = $row_cart['p_price'];
-
-$get_product = "select * from products where product_id='$product_id'";
-
-$run_product = mysqli_query($con,$get_product);
-
-$row_product = mysqli_fetch_array($run_product);
-
-$product_title = $row_product["product_title"];
-
-$i++;
-
-?>
-
-<input type="hidden" name="item_name_<?php echo $i; ?>" value="<?php echo $product_title; ?>">
-
-<input type="hidden" name="item_nubmer_<?php echo $i; ?>" value="<?php echo $i; ?>">
-
-<input type="hidden" name="amount_<?php echo $i; ?>" value="<?php echo $product_price; ?>">
-
-<input type="hidden" name="quantity_<?php echo $i; ?>" value="<?php echo $product_qty; ?>">
-
-<?php } ?>
-
-<input type="hidden" name="shipping_1" value="<?php echo @$_SESSION["shipping_cost"]; ?>" >
-
-<input type="hidden" name="first_name" value="<?php echo $billing_first_name; ?>" >
-
-<input type="hidden" name="last_name" value="<?php echo $billing_last_name; ?>" >
-
-<input type="hidden" name="address1" value="<?php echo $billing_address_1; ?>" >
-
-<input type="hidden" name="address2" value="<?php echo $billing_address_2; ?>" >
-
-<input type="hidden" name="city" value="<?php echo $billing_city; ?>" >
-
-<input type="hidden" name="state" value="<?php echo $billing_state; ?>" >
-
-<input type="hidden" name="zip" value="<?php echo $billing_postcode; ?>" >
-
-<input type="hidden" name="email" value="<?php echo $customer_email; ?>" >
-
-<input type="submit" id="paypal-submit" name="submit" value="Procced With PayPal" class="btn btn-success btn-lg" style="border-radius:0px;" >
-
-</form><!-- paypal-form Ends -->
 
 </td><!-- payment-method-forms-td Ends -->
 
@@ -1503,7 +1374,7 @@ $("#shipping-billing-details-form").submit(function(event){
 
 event.preventDefault();
 
-var confirm_action = confirm("Do You Really Want To Order Cart Products By Pay Offline Method.");
+var confirm_action = confirm("Do You Really Want To Order Cart Products By COD Method.");
 
 if(confirm_action == true){
 
