@@ -1194,19 +1194,7 @@ $count_country_shipping = mysqli_num_rows($run_country_shipping);
 
 if($count_country_shipping == "0"){
 
-echo "
 
-<li>
-
-<p>
-
-There are no shipping types matched/available for your address, or contact us if you need any help.
-
-</p>
-
-</li>
-
-";
 	
 }else{
 	

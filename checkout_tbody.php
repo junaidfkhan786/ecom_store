@@ -971,7 +971,7 @@ $("#shipping-billing-details-form").submit(function(event){
 
 event.preventDefault();
 
-var confirm_action = confirm("Do You Really Want To Order Cart Products By Pay Offline Method.");
+var confirm_action = confirm("Do You Really Want To Order Cart Products By Pay COD Method.");
 
 if(confirm_action == true){
 

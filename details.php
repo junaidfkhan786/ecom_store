@@ -472,7 +472,7 @@ echo "<a href='customer/my_account.php?my_orders'>My Account</a>";
 if(isset($_POST['add_cart'])){
 
 $ip_add = getRealUserIp();
-
+echo $ip_add;
 $p_id = $pro_id;
 
 $product_qty = $_POST['product_qty'];
